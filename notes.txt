@@ -1,0 +1,161 @@
+# 리액트에선 UI 기능만 제공
+# 전역 상태 관리, 라우팅, 빌드 시스템 등은 개발자가 직접 구축 필요
+# API 통신이나 사용자 이벤트를 통해 프로그램 상탯값 변경 -> 리액트는 변경된 상탯값 기반으로 UI를 자동 업데이트함
+## 리액트와 같은 도구가 없으면 직접 브라우저 DOM을 업데이트해야 함
+## DOM 업데이트 코드는 잘 관리하지 않으면, 복잡도가 기하급수적으로 증가함 -> 자체 라이브러리로 관리해야 함
+## 리액트는 가상 돔을 통해 UI를 빠르게 업데이트함 -> 메모리에 이전 UI 상태 저장 및 변경된 부분만 변경
+# 리액트에서 render는 순수 함수, state는 불변 변수로 관리 (state는 속성/상탯값)
+## render는 state가 변경되지 않으면 항상 같은 값을 반환해야 함
+## 컴포넌트 상탯값 변경 시, 기존 값 변경이 아닌 새로운 객체 생성 필요
+## 위 조건 만족 시, 복잡도 감소, 버그 탐색 용이, 렌더링 성능 향상 등의 효과가 존재
+# 리액트 네이티브 = 리액트로 안드로이드/iOS 앱 개발 가능
+## react-dom은 웹 앱에서만 사용, 리액트 네이티브에는 별도 패키지 존재
+## 자바스크립트 실행을 위해 JavascriptCore 사용 (웹킷 내장 JS 엔진)
+# useState : 상탯 값 정의
+# React.createElement : 리액트 요소 반환
+## React.CreateElement(component, props, ...children) => ReactElement
+### 1번 인수 : 문자열/리액트 컴포넌트, 2번 인수 : 컴포넌트 사용 데이터,  3번 인수 : 내부적으로 감싸는 컴포넌트
+#### 1번 인수가 문자열이면 HTML 해당 돔 요소 생성, 2번 인수에서 돔 요소는 style, className 사용
+# 바벨 (babel) : 자바스크립트 코드를 변환해주는 컴파일러 => 최신 문법을 이전 문법에 맞게 변환 (호환 기능)
+## 리액트에서 JSX 문법 사용을 위해 바벨 사용
+## 바벨 사용 시, @babel/core, @babel/cli, @babel/preset-react 필요 (npm i로 설치)
+## npx babel --watch src --out-dir . --presets @babel/preset-react
+### src에 있는 모든 JS 파일을 변환하여 현재 경로에 출력, watch 모드로 변경 사항이 있을 때마다 적용
+## 바벨은 자바스크립트 파일을 다른 자바스크립트 파일로 변환해줌
+### 이는 플러그인 단위로 이루어져 있으며, 여러 개의 플러그인의 집합을 프리셋이라고 함
+# 컴포넌트 코드는 JSX로 사용하면 가독성이 증가
+## JSX는 HTML 태그 형식과 유사
+# 이벤트 처리 함수는 브라우저마다 다르게 동작될 수 있음
+## 리액트에선 이벤트 처리 함수 호출 시, 브라우저 상관 없이 통일된 이벤트 객체 전달
+# 웹팩은 자바스크립트로 만든 프로그램을 배포하기 좋은 형태로 묶어주는 도구
+## npm init -y를 사용하면 package.json 파일 생성
+## npm i webpack webpack-cli react react-dom을 통해 설치
+# 모듈 시스템을 사용하면 필요한 부분만 가져다가 사용할 수 있음
+## JS는 ES6부터 지원하며, 대표적인 것이 commonJS임 -> node.js가 이 표준을 따름
+### ESM (ES6 모듈 시스템)이라고 부름
+### export는 모듈을 내보내는 키워드
+#### export만 작성하면 import로 했을 때 반드시 {}를 통해 그 이름으로 가져와야 함
+#### export default 사용 시, import로 가져올 때 이름 변경 가능
+#### 문자열, 이미지, 컴포넌트 등을 내보낼 수 있음
+### import는 모듈을 가져오는 키워드 / from은 가져오거나 참조할 파일명 작성
+#### 문자열, 이미지, 컴포넌트 등을 가져올 수 있음
+#### as 키워드를 통해 별칭을 지정하여 가져올 수 있음
+# 클래스와 함수형 컴포넌트 차이
+## 리액트 컴포넌트는 클래스형 컴포넌트와 함수형 컴포넌트가 존재함
+### 기능적 측면에선 클래스형 컴포넌트는 함수형 컴포넌트가 할 수 없는 기능을 제공
+#### 상탯값을 가질 수 없으며, 리액트 컴포넌트의 생명 주기 함수를 작성할 수 없음
+#### 하지만 리액트 16.8 이후 훅이 등장하면서 리액트 컴포넌트의 생명 주기 함수를 작성할 수 있음
+#### 되도록 함수형 컴포넌트 작성을 지향하나, 클래스형 컴포넌트도 유지보수를 위해 알아두어야 함
+# create-react-app은 리액트로 웹 앱을 만들기 위해 환경을 제공함
+## 테스트 시스템, HMR (Hot-Module-Replacement), ES6+ 문법, CSS 후처리 등의 필수 개발 환경도 구축해줌
+## 기존 기능 개선 및 새로운 기능 추가 시, 패키지 버전만 올리면 됨
+## npx create-react-app [프로젝트명]
+## npm i -g create-react-app && create-react-app [프로젝트명]
+## npm start : 개발 모드로 실행 (빌드 후, 곧바로 렌더링된 페이지를 보여줌)
+### HMR 동작, 코드 에러 시 메세지 출력
+### HTTPS 호출 방법 : set "HTTPS=true" && npm start
+## npm run build : 배포 환경에서 사용할 파일 생성
+### npm serve -s build를 사용하면 빌드 후 로컬 서버로 실행해줌 (node.js로 실행)
+### build/static 폴더 밑에 파일 이름 내 해쉬 값 포함 (변경 없으면 해쉬 값 동일)
+### import로 가져온 CSS 파일은 build/static/css/main.해쉬값.css로 저장됨
+### 이미지 크기가 10KB 미만이면 CSS에 데이터 URL (data:image) 형식으로 JS 파일에 작성됨 (이상이면 이미지 참조로 가져옴)
+## npm test : 테스트 코드가 실행됨
+### JEST라는 테스트 프레임 워크 사용
+### TEST 파일 인식 조건
+#### __test__ 폴더 내 JS
+#### 파일 이름이 .test.js로 끝남
+#### 파일 이름이 .spec.js로 끝남
+### watch 모드 사용 없이 테스트 실행 : set "CI=true" && npm test
+## npm run eject: 설정 파일 추출 (바벨/웹팩 설정 변경 가능)
+### 이외의 방법은 react-scripts 프로젝트를 포크해서 나만의 프로젝트를 제작하거나 react-app-rewired 패키지를 사용
+## create-react-app의 serviceWorker.js는 PWA와 관련된 코드가 존재
+### PWA는 오프라인에서도 잘 동작하는 웹 앱 제작용 기술
+### index.js에서 serviceWorker.register()를 호출하면 됨
+## 주의 사항
+### index.html, index.js는 빌드 시, 예약된 파일이므로 지우면 안 됨 (그 외에 문제 없음)
+### index.js로 연결된 JS파일이나 CSS 파일은 반드시 src 폴더 밑에 존재해야 함
+### index.html에서 참조하는 파일은 public 밑에 존재해야 함
+### 직접 index.html을 수정해도 되나, 페이지별 다른 속성 부여 시 복잡해짐
+#### 사내 페이지라면 react-helmet을 활용하면 됨
+#### 검색 엔진 최적화가 필요하면 next.js 사용 권장
+### link나 script 태그를 사용하는 것보다 src 폴더 밑에서 import로 가져오는 것이 효율적임
+#### 이미지나 폰트 파일도 상기 방법이 유용함
+#### 웹팩에서 해시값을 이용하여 url을 생성하므로 파일 내용 변경이 없으면 브라우저 캐싱 효과를 볼 수 있음
+# create-react-app 내 ES6 지원 사항
+## 지수 연산자(exponentiation operator)
+## async / await 함수
+## 나머지 연산자 (rest operator) / 전개 연산자 (spread operator)
+## 동적 임포트 (dynamic import)
+## 클래스 필드 (class field)
+## JSX 문법
+## 타입스크립트(typescript), 플로(flow) 타입 시스템
+# create-react-app 기본 설정에선 아무런 폴리필을 포함하지 않는다.
+## npm i core-js로 폴리필 사용 가능 (예시 > padStart / padEnd 등)
+## 바벨에서도 @babel/polyfill 혹은 @babel/preset-env를 통해 폴리필 추가 가능
+### 효율성 측면 순으로 @babel/polyfill < @babel/preset-env < core-js이다. (효율성은 core-js가 좋음)
+# 폴리필 (polyfill) : 기능이 존재하는지 검사해서 그 기능이 없을 때만 주입하는 것
+## 새로운 표준이 나와도 브라우저에서 지원 안 하면 의미 없음
+### 새로운 표준에선 새로운 문법이나 객체, 함수도 추가됨
+### 새로운 문법은 바벨에서 대부분 변환 가능하나 새로운 객체나 함수는 약간 다름
+#### 새로운 함수나 객체는 실행 시점에 주입이 가능하여, 실행 시점에서도 존재하는지 확인이 가능
+# 코드 분할을 활용하면 사용자에게 필요한 양의 코드만 내려줄 수 있음
+## 동적 임포트 활용이 대표적인 하나임
+### 동적 임포트는 프로미스를 반환하므로 then 메서드를 활용할 수 있음
+## react-router-dom에서 지원하는 기능을 사용하면 페이지 단위 코드 분할이 가능
+# create-react-app에선 실행 시점에 환경 변수를 코드로 전달 가능
+# 환경 변수는 개발, 테스트, 배포 환경 별로 다른 값을 적용할 때 유용
+## process.env.{환경_변수_이름}으로 접근 가능
+## NODE_ENV는 development(npm start), test(npm test), production(npm run build)로 구분됨 // process.env.NODE_ENV
+## REACT_APP_도 존재함 (예시 : REACT_APP_API_URL, REACT_APP_NODE_VERSION) // process.env.REACT_APP_~
+## 파일명은 .env.development, .env.test, .env.production으로 구성됨
+# autoprefixer : create-react-app 내 CSS에서 최신 기능을 사용하기 위한 접두사(vendor prefix) 자동 생성기
+# Sass (Syntactically awesome stylesheets)
+## CSS와 유사하나 별도의 문법을 통해 생산성이 높은 스타일 코드 작성에 유용
+## npm i node-sass로 패키지 설치
+## 파일명은 .scss로 끝남
+## $[변수명] 형태로 사용
+
+## 변수와 믹스인(mixin) 개념이 있어 중복 코드를 줄일 수 있음
+# 리액트로 프로그래밍 시, 컴포넌트 중심으로 생각하는 것이 중요
+## UI는 컴포넌트의 조합으로 구성되며, 재사용성을 높이는 것이 좋음
+### 이는 서로 간 의존성을 최소화함과 동시에 응집도를 높이는 것임
+#### 응집도를 높이려면 CSS 코드를 내부에서 관리하는 것이 좋음
+#### 컴포넌트 내부 CSS 코드 관리 방법은 css-module과 css-in-js가 존재함
+##### css-in-js는 내부 CSS 코드 담당 팀이 있으면 사용이 어려움
+# 일반적인 CSS 작성은 CSS 파일을 별도로 만든 후, 참조시키는 것
+### 이 방법은 CSS 내 클래스명이 충돌될 수 있음
+# css-module : 간결한 클래스명을 이용해서 컴포넌트 단위로 스타일을 적용할 때 유용
+## 이를 활용하면 CSS 파일 내 클래스명 충돌을 막을 수 있음
+## {이름}.module.css 형태로 파일을 생성하면 됨
+### style.(클래스명) 형태로 코드에서 호출함
+## classnames 패키지를 사용하면 좀 더 깔끔하게 코드를 정리할 수 있음
+### npm i classnames (import cn from 'classnames')
+#### cn(style.(클래스명)) 형태로 코드에서 호출함
+##### {[style.(클래스명):~,...}와 같이 객체 형태로 사용하면 조건부로 클래스명 입력 가능
+# css-in-js는 자바스크립트 내에서 css 코드를 작성
+## 공통되는 CSS 내용을 변수로 관리가능하며, 동적으로 CSS 코드 작성이 유용
+## npm i styled-components 패키지 설치 필요
+## const 변수명1 = styled.div`` 형태로 선언
+### const 변수명2 = styled(변수명1) 형태도 상속 가능
+### 위 두 문법은 ES6에서 추가된 태그된 탬플릿 리터럴 문법 (tagged template literals)이다.
+# 리액트 앱에서 페이지 전환은 단일 페이지 애플리케이션(Single Page Application)으로 개발하는 게 정석
+## 이는 기존처럼 페이지 요청으로 인한 전환마다 서버에서 페이지를 호출하는 것이 아닌 처음 페이지 요청 후, 그 이후는 클라이언트에서 처리함
+## 이를 위해 브라우저 히스토리 API를 사용함
+# 단일 페이지 애플리케이션 구현에는 두 가지 조건이 필수이다.
+## JS에서 서버 요청 없이 브라우저로 페이지 전환 요청이 가능
+## JS에서 서버 요청 없이, 사용자 페이지의 페이지 전환 요청을 처리
+## 위 두 가지를 만족하는 API는 pushState, replaceState, popState이다.
+### 위 API는 state를 저장하는 스택이 존재함
+### 사용 예시는 window.history.pushState(페이지명, 파라미터, URI명) 형태로 실행
+### 페이지 전환 시마다 window.onpopstate에 현재 state 정보를 저장
+### setPageName을 통해 현재 state에 대한 페이지 정보로 설정함
+## react-router-dom을 사용하면 브라우저 히스토리 API로 페이지 라우팅 처리를 직접 구현하지 않고 사용이 가능
+### BrowerRouter, Route, Link 컴포넌트 사용
+#### Link 컴포넌트에서 to는 변환하는 URI 정보
+#### Route 컴포넌트에서 exact는 정확한 일치 (router = "/router" (O), "/router1" (X))
+#### Route 컴포넌트에서 path는 URI 정보 패턴
+#### Route 컴포넌트는 반드시 Routes로 묶어야 함
+#### Route 컴포넌트에서 component는 path로 접근했을 때의 렌더링할 컴포넌트 (v5 기준)
+##### v6 기준은 element로 바뀜
+#### match를 통해 path 속성에서 url별 패턴 등록 (v5), (예시 : ${match.url}:id, ${match.param.roomId})
+##### v6 기준은 match를 사용 불가 (그냥 ":id" 형태로 호출, 파라미터도 let {id} = useParam() 형태로 호출)

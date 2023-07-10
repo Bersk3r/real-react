@@ -2,7 +2,6 @@ import smallImage from './small.jpeg';
 import bigImage from './big.jpeg';
 import logo from './logo.svg';
 import './App.css';
-
 function App() {
   return (
     <div className="App">

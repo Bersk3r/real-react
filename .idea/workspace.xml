@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Sass File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2SKcpT2A0dzT0yPjp0RZgLPvV0D" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/PZ/Desktop/real-react/css-test/src",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
+      <recent name="C:\Users\PZ\Desktop\real-react\cra-test\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\polyfill" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
+      <recent name="C:\Users\PZ\Desktop\real-react\polyfill\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="" />
+      <created>1688898898086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688898898086</updated>
+      <workItem from="1688898900477" duration="657000" />
+      <workItem from="1688899575334" duration="107000" />
+      <workItem from="1688899695896" duration="235000" />
+      <workItem from="1688899945243" duration="123000" />
+      <workItem from="1688900190864" duration="66000" />
+      <workItem from="1688900268227" duration="139000" />
+      <workItem from="1688900430303" duration="8242000" />
+      <workItem from="1688959548856" duration="12459000" />
+    </task>
+    <task id="LOCAL-00001" summary="middle save">
+      <option name="closed" value="true" />
+      <created>1688974774559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688974774559</updated>
+    </task>
+    <task id="LOCAL-00002" summary="middle save">
+      <option name="closed" value="true" />
+      <created>1688982701403</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688982701403</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="middle save" />
+    <option name="LAST_COMMIT_MESSAGE" value="middle save" />
+  </component>
+</project>

@@ -467,3 +467,290 @@
 // const add7 = makeAddFunc(7); // 중간에 새로운 함수가 생성되어도 영향은 없음
 // console.log(add7(1)); // 8
 // console.log(add5(1)); // 6
+
+// 15. Promise
+// 프로미스는 비동기 상태를 값으로 다룰 수 잇는 객체
+// 프로미스를 사용하면 비동기 프로그래밍할 때, 동기 프로그래밍 방식으로 작성이 가능
+// 프로미스 이전엔 콜백 패턴을 많이 이용
+
+// 프로미스 이전의 콜백 패턴
+// 콜백 패턴은 조금만 중첩되도 코드가 복잡해지는 문제가 존재
+// 콜백 패턴은 코드의 흐름이 순차적이지 않으므로 코드를 읽기가 상당히 힘듦
+// function requestData1(callback) {
+//   callback(data);
+// }
+// function requestData2(callback) {
+//   callback(data);
+// }
+// function onSuccess1(data) {
+//   console.log(data);
+//   requestData2(onSucess2);
+// }
+// function onSuccess2(data) {
+//   console.log(data);
+// }
+// requestData1(onSuccess1);
+
+// 프로미스를 사용하면 위 코드를 순차적으로 실행 가능
+// requestData1()
+//   .then(data => {
+//     console.log(data);
+//     return requestData2();
+//   })
+//   .then(data => {
+//     console.log(data);
+//     }
+//   );
+
+// 프로미스는 3가지 상태로 구성되어 있음
+// 대기 중 (pending) :  결과를 기다리는 중
+// 이행됨 (fullfilled) : 수행이 정상적으로 끝났고, 결괏값을 가지고 있음
+// 거부됨 (rejected) : 수행이 비정상적으로 끝났음
+// 이행됨, 거부됨 상태를 처리됨 상태라고 부름
+// 프로미스는 처리됨 상태가 되면 더 이상 다른 상태로 변경되지 않음
+// 대기 중 상태일 때만 이행됨 혹은 거부됨 상태가 될 수 있음
+
+// 프로미스 생성 방법
+// const p1 = new Promise((resolve, reject) {
+//   // ...
+//   // resolve(data)
+//   // or reject('error message')
+// });
+// const p2 = Promise.reject('error message');
+// const p3 = Promise.resolve(param);
+
+// const p1 = Promise.resolve(123);
+// console.log(p1 !== 123); // true
+// const p2 = new Promise(resolve => setTimeout(() => resolve(10), 1));
+// console.log(Promise.resolve(p2) === p2);
+
+// 프로미스에서 then은 처리됨 상태가 된 프로미스를 처리할 때 사용하는 메소드
+// 프로미스가 처리됨(settled) 상태가 되면 then 메서드의 인수로 전달된 함수가 호출됨
+// requestData(). then(onResolve, onReject);
+// Promise.resolve(123).then(data => console.log(data)) // 123
+// Promise.reject('err').then(null, error => console.log(error)); // 에러 발생
+
+// 연속하여 then 메서드 호출
+// requestData1()
+//   .then(data => {
+//     console.log(data);
+//     return requestData2();
+//   })
+//   .then(data => {
+//     return data + 1;
+//   })
+//   .then(data => {
+//     throw new Error('some error');
+//   })
+//   .then(null, error => {
+//     console.log(error);
+//   })
+
+// then 메서드의 가장 중요한 특징은 항상 연결된 순서대로 호출됨
+// Promise.reject('err')
+//   .then(() => console.log('then 1'))
+//   .then(() => console.log('then 2'))
+//   .then(() => console.log('then 3'), () => console.log('then 4'))
+//   .then(() => console.log('then 5'), () => console.log('then 6'));
+
+// catch는 프로미스 수행 중 발생된 예외를 처리하는 메소드
+// catch 메소드는 then 메소드의 onReject 함수와 같은 역할을 수행
+// 예외 처리는 then 메소드의 onReject 함수보다는 catch 메소드를 이용하는 게 가독성 면에서 좋음
+// Promise.reject(1).then(null, error => {
+//   console.log(error);
+// });
+// Promise.reject(1).catch(error => {
+//   console.log(error);
+// })
+
+// then 메소드의 onReject를 사용했을 때의 문제점
+// then 메서드의 onResolve 함수에서 발생된 예외는 같은 then 메서드의 onReject 함수에서 처리할 수 없음
+// unhandled Promise rejection 에러 발생 (거부됨 상태의 프로미스를 처리하지 않았기 때문)
+// Promise.resolve().then(
+//   () => {
+//     throw new Error('some error');
+//   },
+//   error => {
+//     console.log(error);
+//   },
+// );
+
+// onReject 함수 대신 catch로 처리한 예
+// 프로미스에서 예외 처리를 할 때에는 then 메서드의 onReject 함수보다는 좀 더 직관적인 catch를 사용하는 것을 추천
+// then과 마찬가지로 catch 함수도 새로운 프로미스를 반환 (이후, then이나 catch 연속 사용 가능)
+// Promise.resolve()
+//   .then(() => {
+//     throw new Error('some Error');
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
+
+// Promise.reject(10)
+//   .then(data => {
+//     console.log('then1 : ', data);
+//     return 20;
+//   })
+//   .catch(error => {
+//     console.log('catch:', error);
+//     return 30;
+//   })
+//   .then(data => {
+//     console.log('then2: ', data);
+//   })
+
+// finally는 프로미스가 이행됨 또는 거부됨 상태가 되면 호출하는 메서드
+// finally는 프로미스 체인의 가장 마지막에 사용
+// finally 메서드는 .then(onFinally, onFinally) 코드와 유사하나, 이전에 사용한 프로미스를 그대로 반환함
+// 처리됨 상태인 프로미스를 건들지 않고 추가 작업을 수행할 때 유용
+// requestData()
+//   .then(data => {
+//     // ...
+//   })
+//   .catch(error => {
+//     // ...
+//   })
+//   .finally(() => {
+//     // ...
+//   });
+
+// 데이터의 요청의 성공, 실패 여부에 상관없이 서버에 로그를 보낼 때 finally 메서드 사용
+// function requestData() {
+//   return fetch()
+//     .catch(error => {
+//       // ...
+//     })
+//     .finally(() => {
+//       sendLogToServer('requestData finished');
+//     })
+// }
+// requestData().then(data => console.log(data));
+
+// 16. 프로미스 활용
+// 병렬로 처리하기 (Promise.all)
+// Promise.all은 여러 개의 프로미스를 병렬로 처리할 때 사용
+// then 메서드를 체인으로 연결하면 각각의 비동기 처리가 병렬로 처리되지 않음 (순차적 실행)
+// requestData1()
+//   .then(data => {
+//     console.log(data);
+//     return requestData2();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   })
+
+// 비동기 함수 간에 서로 의존성이 없으면 병렬로 처리하는 게 빠름
+// then 메서드를 체인으로 연결하지 않고, 각각 호출하면 병렬 처리됨
+// 두 함수는 동시에 실행됨
+// requestData1().then(data => console.log(data));
+// requestData2().then(data => console.log(data));
+
+
+// Promise.all 함수는 프로미스를 반환함
+// Promise.all 함수가 반환하는 프로미스는 입력된 모든 프로미스가 처리됨 상태가 되어야 마찬가지로 처리됨이 됨
+// 만약 하나라도 거부 상태이면 Promise.all 함수가 반환하는 프로미스도 거부됨이 됨
+// Promise.all([requestData1(), requestData2()]).then(([data1, data2]) => {
+//   console.log(data1, data2);
+// });
+
+// Promise.race : 가장 빨리 처리되는 프로미스 가져오기
+// Promise.race는 여러 개의 프로미스 중에서 가장 빨리 처리된 프로미스를 반환
+// Promise.race 함수에 입력된 여러 프로미스 중에서 하나라도 처리됨 상태가 되면 Promise.race 함수가 반환하는 프로미스도 처리됨이 됨
+// Promise.race([
+//   requestData(),
+//   new Promise((_, reject) => setTimeout(reject, 3000)),
+// ])
+//   .then(data => console.log(data))
+//   .catch(error => console.log(error));
+
+// 프로미스를 이용한 데이터 캐싱
+// 처리됨 상태가 되면 그 상태를 유지하는 프로미스의 성질을 이용하여 데이터 캐싱 가능
+// 처음 호출 시에만 해당 함수를 실행하고 그 결과를 변수에 저장
+// 데이터를 가져오는 작업의 실패 케이스는 고려되지 않았으나 프로미스로 캐싱 구현 가능
+// let cachedPromise;
+// function getData() {
+//     cachedPromise = cachedPromise || requestData();
+//     return cachedPromise;
+// }
+// getData.then(v => console.log(v));
+// getData.then(v => console.log(v));
+
+// 프로미스 사용 시 주의 사항
+
+// return 키워드 깜빡하지 않기
+// then 메서드 내부 함수에서 return 키워드를 입력하는 것을 깜빡하기 쉬움
+// then 메서드가 반환하는 프로미스 객체의 데이터는 내부 함수가 반환한 값임
+// return이 없으면 프로미스 객체의 데이터는 undefined가 되므로 주의해야 함
+// Promise.resolve(10)
+//   .then(data => {
+//     console.log(data);
+//     Promise.resolve(20);
+//   })
+//   .then(data => {
+//     console.log(data);
+//   });
+
+// 프로미스는 불변 객체
+// function requestData() {
+//   const p = Promise.resolve(10);
+//   p.then(() => {
+//     return 20; // 새로운 프로미스 생성
+//   });
+//   return p;
+// }
+// requestData().then(v => {
+//   console.log(v); // 10
+// })
+
+// function requestData() {
+//   return Promise.resolve(10).then(v => {
+//     return 20;
+//   });
+// }
+
+// 프로미스 중첩 주의
+// 프로미스를 중첩하여 사용하면 콜백 패턴처럼 복잡해지므로, 사용을 비권장함
+// requestData1().then(result1 => {
+//     requestData2(result1).then(result2 => {
+//      // ...
+//   });
+// });
+
+// 위 중첩 해결 but result1 참조가 안 됨
+// requestData1()
+//   .then(result1 => {
+//     return requestData2(result1);
+//   })
+//   .then(result2 => {
+//     // ...
+//   })
+
+// 위 문제는 Promise.all로 해결
+//  promise.all 함수로 입력하는 배열에 프로미스가 아닌 값을 넣으면, 그 값 그대로 이행됨 상태의 프로미스가 됨
+// requestData1()
+//   .then(result1 => {
+//     return Promise.all([result1, requestData2(result1)]);
+//   })
+//   .then(([result1, result2]) => {
+//     // ...
+//   });
+
+// 동기 코드의 예외 처리
+// 프로미스를 동기 코드처럼 사용하는 경우, 예외 처리가 중요함
+function requestData() {
+  doSync(); // 위 함수가 fetch 이전에 실행되는 게 아니라면 then에 넣는 게 좋음
+  return fetch()
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+}
+function requestData() {
+  return fetch()
+    .then(data => {
+      doSync(); // 이 곳에서 발생되는 예외는 catch에서 처리 가능
+      console.log(data)
+    })
+    .catch(error => console.log(error));
+}
+
+
+

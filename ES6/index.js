@@ -737,20 +737,411 @@
 
 // 동기 코드의 예외 처리
 // 프로미스를 동기 코드처럼 사용하는 경우, 예외 처리가 중요함
-function requestData() {
-  doSync(); // 위 함수가 fetch 이전에 실행되는 게 아니라면 then에 넣는 게 좋음
-  return fetch()
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-}
-function requestData() {
-  return fetch()
-    .then(data => {
-      doSync(); // 이 곳에서 발생되는 예외는 catch에서 처리 가능
-      console.log(data)
-    })
-    .catch(error => console.log(error));
-}
+// function requestData() {
+//   doSync(); // 위 함수가 fetch 이전에 실행되는 게 아니라면 then에 넣는 게 좋음
+//   return fetch()
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error));
+// }
+// function requestData() {
+//   return fetch()
+//     .then(data => {
+//       doSync(); // 이 곳에서 발생되는 예외는 catch에서 처리 가능
+//       console.log(data)
+//     })
+//     .catch(error => console.log(error));
+// }
 
+// 17. async/await
+// async/await를 사용하면 프로미스 then 메서드를 체인 형식으로 호출하는 것보다 가독성이 좋아짐
+// 하지만 async/await가 프로미스를 완전히 대체하는 것은 아님
+// then 메서드를 체인 형식으로 호출하는 것보다 가독성은 좋음
+// 프로미스는 객체로 존재하지만 async/await는 함수에 적용되는 개념
+// async function getData() {
+//   return 123;
+// }
+// getData().then(data => console.log(data)); // 123
 
+// async function getData() {
+//   return Promise.resolve(123);
+// }
+// getData().then(data => console.log(data)); // 123
 
+// async function getData() {
+//   throw new Error('123');
+// }
+// getData().catch(error => console.log(error));
+
+// await 키워드는 async/await 함수 내부에서 사용됨
+// await 키워드 오른쪽에 프로미스를 입력하면  그 프로미스가 처리됨 상태가 될 때까지 대기
+// await 키워드로 순차적인 코드 작성이 가능
+// function requestData(value) {
+//   return new Promise(resolve =>
+//     setTimeout(() => {
+//       console.log('requestData: ', value);
+//       resolve(value);
+//     }, 1000),
+//   );
+// }
+// async function getData() {
+//   const data1 = await requestData(10);
+//   const data2 = await requestData(20);
+//   console.log(data1, data2);
+//   return [data1, data2];
+// }
+// getData().then(
+//   data => {
+//     console.log(data);
+//   }
+// )
+
+// await 키워드는 async 함수 내에서만 사용 가능
+// function getData() {
+//   const data = await requestData(10);
+//   console.log(data);
+// }
+
+// async/await와 Promise 비교
+// 비동기 함수 간에 의존성이 높아질수록 async await와 프로미스의 가독성 차이는 더 선명하게 드러남.
+// function getDataPromise() {
+//   asyncFunc1()
+//     .then(data => {
+//       console.log(data);
+//       return asyncFunc2();
+//     })
+//     .then(data => {
+//       console.log(data);
+//     });
+// }
+// async function getDataAsync() {
+//   const data1 = await asyncFunc1();
+//   console.log(data1);
+//   const data2 = await asyncFunc2();
+//   console.log(data2);
+// }
+
+// 서로 의존성이 있는 여러 비동기 함수 처리를 각각 async/await 혹은 프로미스로 작성
+// function getDataPromise() {
+//   return asyncFunc1()
+//     .then(data1 => Promise.all([data1, asyncFunc2(data1)]))
+//     .then(([data1, data2]) => {
+//       return asyncFunc3(data1, data2);
+//     })
+// }
+// async function getDataAsync() {
+//   const data1 = await asyncFunc1();
+//   const data2 = await asyncFunc2(data1);
+//   return asyncFunc3(data1, data2);
+// }
+
+// 비동기 함수를 병렬로 실행
+// 두 함수 사이에 의존성이 없으면 동시에 실행하는 게 좋음
+// async function getData() {
+//   const data1 = await asyncFunc1();
+//   const data2 = await asyncFunc2();
+// }
+
+// 프로미스는 생성과 동시에 비동기 코드가 실행됨
+// async function getData() {
+//   const p1 = asyncFunc1();
+//   const p2 = asyncFunc2();
+//   const data1 = await p1;
+//   const data2 = await p2;
+// }
+
+// promise.all을 사용한 위 함수 개선
+// async function getData() {
+//   const [data1, data2] = await Promise.all([asyncFunc1(), asyncFunc2()]);
+// }
+
+// async/await 함수 예외 처리
+// async function getData() {
+//   try {
+//     await doAsync(); // async/await가 아니면 doAsync 함수 예외는 catch 문에서 처리되지 않음 (종료 시점 미정)
+//     return doSync();
+//   } catch(error) {
+//     console.log(error);
+//   }
+// }
+
+// Thenable : 프로미스처럼 동작하는 객체 (프로미스가 아니어도 then 메서드를 가진 객체)
+// async/await도 then 메서드를 가진 객체를 프로미스처럼 취급
+
+// class ThenableExample {
+//   then(resolve, reject) {
+//     setTimeout(() => resolve(123), 1000);
+//   }
+// }
+// async function asyncFunc() {
+//   const result = await new ThenableExample(); // Thenable 객체 (비동기 객체는 생성 즉시 실행됨)
+//   console.log(result); // 123
+// }
+
+// 18. 템플릿 리터럴 (Template Literals)는 변수를 이용하여 동적으로 문자열을 생성할 수 있는 문법
+// 백틱 (``)을 이용하며, 표현식을 사용할 때에는 ${expression} 형태로 입력
+
+// ES6 이전 동적 문자열 생성
+// var name = 'mike';
+// var score = 80;
+// var msg = 'name: ' + name + ', score/100: ' + score/100;
+// console.log(msg);
+
+// const msg = `name: ${name}, score/100: ${score/100}`;
+
+// 템플릿 리터럴을 사용하면 여러 줄 문자열을 생성하기 쉬움
+// 하기 코드는 줄 끝에 \n 기호가 존재하면 줄 바꿈이 되므로 복잡함
+// \를 이용한 방법도 표현식이 들어가면 복잡해짐
+// const msg = 'name: ' + name + '\n' +  'age: ' + age + '\n' + "score: " + score + '\n';
+// const msg = `name: ${name}
+// age: ${age}
+// score: ${score}`;
+
+// 태그된 템플릿 리터럴 (Tagged Template Literal) : 템플릿 리터럴을 확장한 개념
+// 태그된 템플릿 리터럴은 함수로 정의됨
+// 함수명과 함께 템플릿 리터럴을 붙여서 사용
+// function taggedFunc(strings, ...expressions) { // tagged template literal
+//   return 123;
+// }
+// const v1 = 10;
+// const v2 = 20;
+// const result = taggedFunc`a ${v1} b ${v2}`;
+// console.log(result);
+
+// const v1 = 10;
+// const v2 = 20;
+// taggedFunc`a-${v1}-b-${v2}-c`; // 표현식을 기준으로 문자열을 분할
+// strings = ['a-', '-b-', '-c'];
+// taggedFunc`a-${v1}-b-${v2}`;  // 표현식 기준으로 문자열을 분할했을 때, 오른쪽/왼쪽에 아무런 값이 없으면 빈 값이 됨
+// strings = ['a-', '-b-', ''];
+// taggedFunc`${v1}-b-${v2}`;
+// strings = ['', '-b-', ''];
+// expressions = [10,20];
+// function taggedFunc(strings, ...expressions) {
+//   console.log(strings.length === expressions.legnth + 1); // expression의 갯수 + 1은 strings의 갯수가 동일
+// }
+
+// 태그된 템플릿 문자열은 일부 문자열을 강조할 때에도 사용할 수 있음
+// expressions 매개변수로 전달된 문자열을 HTML strong 태그로 감싸주는 경우
+// 태그된 템플릿 리터럴 함수의 반환 값이 꼭 문자열일 필요는 없음 => styled-components에선 태그된 템플릿 리터럴 함수가 리액트 컴포넌트를 반환함
+// function highlight(strings, ...expressions) {
+//   return strings.reduce(
+//     (prevValue, str, i) =>
+//       expressions.length === i
+//       ? `${prevValue}${str}`
+//       : `${prevValue}${str}<strong>${expressions[i]}</strong>`,
+//      '',
+//     );
+// }
+// const v1 = 10;
+// const v2 = 20;
+// const result = highlight`a ${v1} b ${v2} c`;
+// console.log(result);
+
+// 19. 제네레이터 : 함수의 실행을 중간에 멈추고 재개할 수 있는 독특한 기능
+// 실행을 멈출 때 값을 전달할 수 있어 반복문에서 제네레이터가 전달하는 값을 한 개씩 꺼내어 사용 가능
+// 배열이 반복문에서 사용되는 것과 유사
+// 보통의 컬렉션(collection)과 달리 값이 미리 생성하지 않음
+// => 값을 미리 만들어 놓으면 불필요하게 메모리를 사용 (컬렉션)
+// => 필요한 순간에 값을 계산하여 전달할 수 있어 메모리 측면에서 효율적임
+// 제네레이터는 값을 전달하는 것 이외에도 다른 함수와 협업 멀티태스킹 (cooperative multitasking)을 할 수 있음
+// => 이는 제네레이터가 실행을 멈추고 재개가 가능하므로 가능한 것
+
+// 제네레이터는 별표와 함께 정의된 함수와 그 함수가 반환하는 제네레이터 객체로 구성됨
+// function* f1() { // 제네레이터 선언
+//   yield 10; // 함수 실행 일시 중단
+//   yield 20;
+//   return 'finished';
+// }
+// const gen = f1(); // 실행 시, 제네레이터 객체 반환
+
+// 제네레이터 객체는 next, return, throw의 메서드를 가짐 => 주로 next를 사용
+// next 메서드가 존재하는 것은 제네레이터 객체가 반복자(iterator)라는 것을 의미
+// function* f1() {
+//   console.log('f1-1');
+//   yield 10;
+//   console.log('f1-2');
+//   yield 20;
+//   console.log('f1-3');
+//   return 'finished';
+// }
+// next 결과
+// const gen = f1(); // 제네레이터 함수를 실행하면 제네레이터 객체만 반환하고 실제로 함수 내부는 실행되지 않음
+// console.log(gen.next()); // 다음 yield를 만날때까지 실행 (데이터 객체 반환, done: false, 못 만나면 true 반환)
+// console.log(gen.next());
+// console.log(gen.next()); // return이 함수 최상단에 있으면 첫 next 메서드 호출에서 done 값은 참이 됨
+
+// return 결과
+// const gen = f1();
+// console.log(gen.next());
+// console.log(gen.return('abc')); // 호출되면 done이 참이 됨
+// console.log(gen.next());
+
+// throw 결과
+// function* f1() {
+//   try {
+//     console.log('f1-1');
+//     yield 10;
+//     console.log('f1-2');
+//     yield 20;
+//   } catch(e) {
+//     console.log('f1-catch', e);
+//   }
+// }
+// const gen = f1();
+// console.log(gen.next());
+// console.log(gen.throw('some error')); // throw 메서드 호출 시, 예외가 발생된 것으로 처리되어 catch 문으로 진입, done은 참이 됨
+
+// 제네레이터 객체는 반복 가능하면서 반복자임
+// 반복자인 이유
+// 1. next 메서드를 가짐
+// 2. next 메서드는 value와 done 속성자를 가진 객체를 반환
+// 3. done 속성 값을 작업이 끝났을 때 참이 됨
+
+// 반복 가능한 객체인 이유
+// 1. Symbol.iterator 속성 값을 함수로 가지고 있음
+// 2. 해당 함수를 호출하면 반복자를 반환
+
+// 배열은 반복가능한 객체임
+// const arr = [10, 20, 30];
+// const iter = arr[Symbol.iterator](); // Symbol.iterator를 속성 값을 가지며,
+// console.log(iter.next()); // 반환한 변수가 반복자임
+
+// 제네레이터는 반복가능한 객체임
+// function* f1() {
+//   // ...
+// }
+// const gen = f1();
+// console.log(gen[Symbol.iterator]() === gen); // Symbol.iterator 속성값을 호출한 결과가 자기자신(반복자)임
+
+// 반복가능한 객체를 이용하는 방법
+// function* f1() {
+//   yield 10;
+//   yield 20;
+//   yield 30;
+// }
+// for (const v of f1()) { // for .. of는 반복가능한 객체로부터 반복자를 얻음, next 메서드를 호출하면서 done이 true가 될 때까지 반복
+//   console.log(v);
+// }
+// const arr = [...f1()]; // 전개 연산자도 done이 true가 될 때까지 값을 펼침
+// console.log(arr);
+
+// 제네레이터, 반복자, 반복가능한 객체를 이용하면 함수형 프로그래밍의 대표적인 함수를 쉽게 구현 가능
+// 제네레이터 함수 내부에서 반복가능한 객체를 사용
+// => 새로운 배열 객체를 생성하지 않음
+// => 연산이 필요한 순간에만 실행
+// 필요한 순간에만 연산하는 방식을 지연 평가 (lazy evaluation)이라고 함
+// 필요한 순간에만 연산하므로, 무한대 연산, 무한 루프에서도 에러가 멈추지 않음
+// function* map(iter, mapper) {
+//   for(const v of iter) {
+//     yield mapper(v);
+//   }
+// }
+// function* filter(iter, test) {
+//   for(const v of iter) {
+//     if(test(v)) {
+//       yield v;
+//     }
+//   }
+// }
+// function* take(n, iter) {
+//   for(const v of iter) {
+//     if(n <= 0) return;
+//     yield v;
+//     n--;
+//   }
+// }
+// const values = [1,2,3,4,5,6,7,8,9,10];
+// const result = take(3, map(filter(values, n => n%2 === 0), n => n * 10)); // 함수 호출 시 제네레이터 객체만 생성되고 연산이 수행되지 않음
+// console.log([...result]); // 이 때, 연산을 수행
+
+// function* naturalNumbers() {
+//   let v = 1;
+//   while(true) {
+//     yield v++;
+//   }
+// }
+// const values = naturalNumbers();
+// const result = take(3, map(filter(values, n => n%2 === 0), n => n * 10)); // 함수 호출 시 제네레이터 객체만 생성되고 연산이 수행되지 않음
+// console.log([...result]); // 이 때, 연산을 수행
+
+// 제네레이터 함수에서 다른 제네레이터 함수를 호출하는 방법은 yield* 키워드를 이용
+// yield* 키워드 오른쪽에는 반복 가능한 객체가 오도록 설계되어 있음
+// function* g1() {
+//   yield 2;
+//   yield 3;
+// }
+// function* g2() {
+//   yield 1;
+//   yield* g2(); // 제네레이터 함수에서 다른 제네레이터 함수 호출
+//   yield 4;
+// }
+// console.log(...g2());
+
+// function* g2_second() {
+//   yield 1;
+//   for(const value of g1()) { // g1과 동일
+//     yield value;
+//   }
+//   yield 4;
+// }
+// function g2_third() {
+//   yield 1;
+//   yield* [2,3]; // 제네레이터 뿐만이 아닌 반복 가능한 객체가 올 수 있음
+//   yield 4;
+// }
+
+// 제네레이터 함수로 데이터 전달
+// 제네레이터 함수는 외부로부터 데이터를 받아 소비가 가능
+// next 메서드를 호출하는 쪽에서 제네레이터 함수로 데이터 전달 가능
+// function* f1() {
+//   const data1 = yield; // next 메서드로 전달 받은 값을 결과 값으로 전달
+//   console.log(data1); // 10
+//   const data2 = yield;
+//   console.log(data2); // 20;
+// }
+// const gen = f1();
+// gen.next(); // 제네레이터 함수가 실행되도록 만드는 역할
+// gen.next(10); // 인수로 데이터를 전달
+// gen.next(20);
+
+// 협업 멀티태스킹
+// 제네레이터는 다른 함수와 협업 멀티태스킹이 가능
+// 멀티태스킹은 여러 개의 태스크를 실행할 때, 하나의 태스크가 종료되기 전에 멈추고 다른 태스크가 실행되는 것을 의미
+// 제네레이터는 멈추고 실행하는 것이 가능하여 멀티태스킹이 가능
+// 협업이 붙은 이유는 제네레이터가 실행을 멈추는 시점을 자발적(non-preemptive)으로 선택가능하므로
+// 실행을 멈추는 시점을 자발적으로 선택 못하면 선점형(preemptive) 멀티태스킹이라고 함
+// function* minsu() {
+//   const myMsgList = [
+//     '안녕 나는 민수야',
+//     '만나서 반가워',
+//     '내일 영화 볼래?',
+//     '시간 안 되니?',
+//     '내일 모레는 어때?',
+//   ];
+//   for(const msg of myMsgList) {
+//     console.log('수지: ', yield msg); // 자발적으로 자신의 실행을 멈춤
+//   }
+// }
+// function suji() {
+//   const myMsgList = ['', '안녕 나는 수지야', '그래 반가워', '...'];
+//   const gen = minsu();
+//   for(const msg of myMsgList) {
+//     console.log('민수: ', gen.next(msg).value); // 제네레이터가 다시 실행되도록 함
+//   }
+// }
+// suji();
+
+// 제네레이터 함수에서의 예외 처리
+// 제네레이터 함수에서 발생한 예외는 next 메서드를 호출하는 외부 함수에 영향을 줌
+// function* getFunc() {
+//   throw new Error('some error'); // 제네레이터 함수에서 예외가 발생
+// }
+// function func() {
+//   const gen = getFunc(); // 제네레이터 객체가 만들어지는 시점에선 예외가 발생하지 않음
+//   try {
+//     gen.next(); // next 메서드가 호출되면 제네레이터 함수의 예외가 일반 함수에 영향을 줌
+//   } catch(e) {
+//     console.log('in catch: ', e);
+//   }
+// }
+// func();

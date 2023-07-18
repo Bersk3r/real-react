@@ -29,7 +29,7 @@ function GreetingA({isLogin, name}) {
 function GreetingB({isLogin, name}) {
   return (
     <p
-      className={{isLogin > 'greeting' : 'noAuth'}}
+      className={isLogin ? 'greeting' : 'noAuth'}
       onClick={isLogin ? showMenu : goToLoginPage}
       >
       {isLogin ? `${name}님 안녕하세요.` : `권한이 없습니다.`}
@@ -133,7 +133,6 @@ function Greeting({isEvent, isLogin, name, cash}) {
 <div>{products.map(/* */)}</div> // 배열의 기본 값으로 빈 배열로 설정하면 코드가 간결해짐
 
 // 속성값으로부터 새로운 상탯값을 만드는 예
-//
 function MyComponent({todos}) {
   const [doneList, setDoneList] = useState(todos.filter(item => item.done)); // 부모로부터 받은 todos로부터 완료 목록 doneList를 만들음
   // 개선 방안 : doneList는 useMemo로 생성

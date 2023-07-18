@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c4/depend-uses/src/use-effect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c4/depend-uses/src/use-effect2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c4/depend-uses/src/use-effect3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c4/good-comp/src/file-order3.js" beforeDir="false" afterPath="$PROJECT_DIR$/c4/good-comp/src/file-order3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c4/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c4/notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5e2368a4-5f6b-49b1-a823-ab89577f0ab3" />
+        <option name="url" value="https://github.com/Bersk3r/real-react.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -39,7 +57,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/css-test/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/c4/depend-uses/src&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -52,11 +70,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c4\depend-uses\src" />
+      <recent name="C:\Users\PZ\Desktop\real-react\c4\good-comp\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
       <recent name="C:\Users\PZ\Desktop\real-react\cra-test\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\polyfill" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
@@ -83,6 +101,10 @@
       <workItem from="1688959548856" duration="12459000" />
       <workItem from="1688982898989" duration="8526000" />
       <workItem from="1688993041575" duration="103000" />
+      <workItem from="1689403472114" duration="8290000" />
+      <workItem from="1689487133577" duration="1190000" />
+      <workItem from="1689614183945" duration="2676000" />
+      <workItem from="1689664742220" duration="11883000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

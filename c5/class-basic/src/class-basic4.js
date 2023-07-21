@@ -105,3 +105,83 @@ function MyComponent() {
   }
   // ...
 }
+
+/**디바운스 기능을 제공하는 useDebounce 훅의 구현 및 사용*/
+function useDebounce({callback, ms, deps}) { // ms 시간 동안 deps가 변경되지 않으면 callback 함수를 호출하는 커스텀 훅임
+  useEffect(() => {
+    const id = setTimeout(callback, ms);
+    return () => clearTimeout(id);
+  }, deps);
+}
+
+function Profile() {
+  let [name, setName] = useState('');
+  let [nameTemp, setNameTemp] = useState('');
+  useDebounce({ // 사옹자가 입력하는 문자열을 nameTemp에 기록하닥 1초간 입력이 없으면 name에 저장
+    callback: () => setName(nameTemp),
+    ms: 1000,
+    deps: [nameTemp],
+  });
+  return (
+    <div>
+      <p>{name}</p>
+      <input
+        type="text"
+        onChange={e=> setNameTemp(e.currentTarget.value)}
+        value={nameTemp}
+      />
+    </div>
+  );
+}
+
+/**useDebounce 훅의 래퍼 컴포넌트*/
+function Debounce({children, ...props}) { // 반환값이 없으므로 children 그대로 반환하면 됨
+  useDebounce(props);
+  return children;
+}
+
+class Profile extends React.Component {
+  state = {name: '', nameTemp: ''};
+  render() {
+    const {name, nameTemp} = this.state;
+    return (
+      <Debounce
+        callback={() => this.setState({name: nameTemp})}
+        ms={1000}
+        deps={[nameTemp]}
+      >
+        <div>
+          <p>{name}</p>
+          <input
+            type="text"
+            onChange={e => this.setState({nameTemp: e.currentTarget.value})}
+            value={nameTemp}
+          />
+        </div>
+      </Debounce>
+    );
+  }
+}
+
+/**useMounted 훅의 기능을 제공하기 위해 구현한 고차 컴포넌트와 렌더 속성값*/
+function Mounted({children}) {
+  const mounted = useMounted();
+  return Children(mounted); // 렌더 속성값에서는 children 속성값이 함수이므로 매개변수로 정보를 전달할 수 있음
+}
+
+function withMounted(Component) {
+  return function(props) {
+    const mounted = useMounted();
+    return <Component {...props} mounted={mounted} />; // 고차 컴포넌트는 새로 생성하는 컴포넌트의 속성값으로 정보를 전달할 수 있음
+  };
+}
+
+/**클래스형 컴포넌트에서 withMounted 고차 컴포넌트를 사용하기*/
+class MyComponent extends React.Component {
+  render() {
+    const {mounted} = this.props;
+    return <p>{mounted ? 'yes' : 'no'}</p>;
+  }
+}
+
+export default withMounted(MyComponent);

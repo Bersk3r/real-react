@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-test/src/common/createReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-test/src/friend/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-test/src/timeline/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c6/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c6/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c6/redux-basic/src/redux-basic2.js" beforeDir="false" afterPath="$PROJECT_DIR$/c6/redux-basic/src/redux-basic2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,22 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/css-test/src&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "c6",
+    "last_opened_file_path": "C:/Users/USER/Desktop/real-react",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
@@ -59,6 +65,7 @@
       <recent name="C:\Users\PZ\Desktop\real-react\polyfill" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\real-react\c6\redux-test\src\common" />
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
@@ -83,6 +90,8 @@
       <workItem from="1688959548856" duration="12459000" />
       <workItem from="1688982898989" duration="8526000" />
       <workItem from="1688993041575" duration="103000" />
+      <workItem from="1690297621691" duration="2503000" />
+      <workItem from="1690301728285" duration="4438000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

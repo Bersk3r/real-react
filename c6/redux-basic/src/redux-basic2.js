@@ -297,3 +297,21 @@ store.dispatch({type: 'INCREMENT'}); // INCREMENT 액션이 발생되면 상탯�
 store.dispatch({type: 'OTHER_ACTION'}); // 등록되지 않은 액션이 발생하면 상탯값 같음 로그 출력
 store.dispatch({type: 'INCREMENT'});
 
+
+/**combineReducers 함수를 사용한 예*/
+// import { combineReducers } from 'redux';
+// ...
+// export default combineReducers({
+//   common: reducer,
+//   timelines: timelineReducer,
+// });
+
+/**combineReducers 함수를 사용한 상탯값의 구조*/
+//  const state = {
+//    timeline: {
+//      common: { // 불필요하게 common이라는 이름의 객체가 추가됨
+//        nextPage: 0,
+//      },
+//    }
+//    // ...
+// }

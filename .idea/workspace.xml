@@ -5,51 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change afterPath="$PROJECT_DIR$/c6/redux-basic/src/redux-basic3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/common/createItemLogic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/common/createReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/common/mergeReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/common/mockData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/common/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/friend/component/FriendList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/friend/container/FriendMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/friend/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/timeline/component/TimelineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/timeline/container/TimelineMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test2/src/timeline/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/common/createItemLogic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/common/createReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/common/mergeReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/common/mockData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/common/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/friend/component/FriendList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/friend/container/FriendMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/friend/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/timeline/component/TimelineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/timeline/container/TimelineMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/redux-test3/src/timeline/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/common/createItemLogic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/common/createReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/common/mergeReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/common/mockData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/common/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/friend/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/friend/component/FriendList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/friend/component/NumberSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/friend/container/FriendMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/friend/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/timeline/component/TimelineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/timeline/container/TimelineMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c6/reselect-test1/src/timeline/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/createItemLogic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/createReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/mergeReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/mockData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/common/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/component/FriendList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/component/NumberSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/container/FriendMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/state/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/friend/state/selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/timeline/component/TimelineList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/timeline/container/TimelineMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/timeline/state/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/timeline/state/saga.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/redux-saga-test1/src/timeline/state/saga.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/common/createItemLogic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/common/createReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/common/mergeReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/common/mockData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/common/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/component/FriendList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/component/NumberSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/container/FriendMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/state/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/friend/state/selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/timeline/component/TimelineList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/timeline/container/TimelineMain.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c6/reselect-test2/src/timeline/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c6/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c6/notes.txt" afterDir="false" />
     </list>
@@ -80,37 +72,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "c6",
-    "last_opened_file_path": "C:/Users/PZ/Desktop/real-react/c6/reselect-test1",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;c6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/c6/redux-saga-test1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-saga-test1" />
+      <recent name="C:\Users\PZ\Desktop\real-react\c6\reselect-test2" />
       <recent name="C:\Users\PZ\Desktop\real-react\c6\reselect-test1" />
       <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-test3" />
       <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-test2" />
-      <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-test2\src\friend\container" />
-      <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-test2\src\friend\component" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-saga-test1\src\timeline\state" />
+      <recent name="C:\Users\PZ\Desktop\real-react\c6\reselect-test2\src\friend\state" />
+      <recent name="C:\Users\PZ\Desktop\real-react\c6\reselect-test2\src\friend\index" />
       <recent name="C:\Users\PZ\Desktop\real-react\c6\redux-test2\src\timeline\component" />
       <recent name="C:\Users\USER\Desktop\real-react\c6\redux-test\src\common" />
-      <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -134,7 +126,10 @@
       <workItem from="1690297621691" duration="2503000" />
       <workItem from="1690301728285" duration="4438000" />
       <workItem from="1690650118200" duration="4757000" />
-      <workItem from="1690735348121" duration="3238000" />
+      <workItem from="1690735348121" duration="3267000" />
+      <workItem from="1690792596962" duration="3490000" />
+      <workItem from="1690814261600" duration="2037000" />
+      <workItem from="1690899676506" duration="3892000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

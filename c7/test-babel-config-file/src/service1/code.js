@@ -1,10 +1,3 @@
-const element = <div>babel test</div>; // 리액트 프리셋을 이용하여 JSX 문법을 변환할 수 있음
-const text = `element type is ${element.type}`;
+const element = <div>babel test</div>; // 전체 설정 파일의 리액트 프리셋 적용됨
+const text = `element type is ${element.type}`; // 지역 설정 파일의 템플릿 리터럴 플러그인이 적용됨, 전체 설정 파일의 loose 옵션이 적용되지 않은 것을 확인할 수 있음, 지역 설정이 전체 설정을 덮어쓰므로
 const add = (a,b) => a + b;
-
-/**위 코드를 바벨로 변환한 결과*/
-// const element = /*#__PURE__*/React.createElement("div", null, "babel"); // JSX 문법은 createElement 함수 호출로 바뀜
-// const text = "element type is ".concat(element.type); // 템플릿 리터럴은 문자열의 concat 메서드 호출로 변환됨
-// const add = function (a, b) { // 호살표 함수는 일반 함수로 변환됨
-//   return a + b;
-// };

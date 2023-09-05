@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-loader/my-csv-loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-loader/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-loader/src/member.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-loader/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-plugin/my-plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-plugin/src/index1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-plugin/src/index2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c7/webpack-custom-plugin/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c7/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c7/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c7/webpack-split/src/index3.js" beforeDir="false" afterPath="$PROJECT_DIR$/c7/webpack-split/src/index3.js" afterDir="false" />
-    </list>
+    <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +95,7 @@
       <workItem from="1693153112910" duration="1626000" />
       <workItem from="1693832246341" duration="3290000" />
       <workItem from="1693835599259" duration="3957000" />
-      <workItem from="1693926588304" duration="5462000" />
+      <workItem from="1693926588304" duration="5799000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

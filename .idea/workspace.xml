@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change afterPath="$PROJECT_DIR$/c8/test-ssr/notes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-ssr/src/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-ssr/src/prerender.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/notes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/pages/_error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/pages/page1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/pages/page2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/src/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/static/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c8/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.1d70b8cce05a19429835.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.1d70b8cce05a19429835.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.565448d849aec960ec60.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.565448d849aec960ec60.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.6bcd3c95fa350d5a7953.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.6bcd3c95fa350d5a7953.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.fb7ab1176b9a9b0697f9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/dist/main.fb7ab1176b9a9b0697f9.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-ssr/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-ssr/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,30 +42,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;c8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/c8/test-ssr/src&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.emmet&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "c8",
+    "last_opened_file_path": "C:/Users/PZ/Desktop/real-react/c8/test-next/static",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.idesettings.emmet",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c8\test-next\static" />
       <recent name="C:\Users\PZ\Desktop\real-react\c8\test-ssr\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
       <recent name="C:\Users\PZ\Desktop\real-react\cra-test\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
@@ -105,7 +94,7 @@
       <workItem from="1688993041575" duration="103000" />
       <workItem from="1694008400809" duration="4551000" />
       <workItem from="1694013030382" duration="3924000" />
-      <workItem from="1694094649304" duration="8131000" />
+      <workItem from="1694094649304" duration="11813000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

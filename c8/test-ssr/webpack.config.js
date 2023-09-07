@@ -1,14 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");  // webpack-node-externals 모듈은 node_modules 폴더 밑에 있는 모듈을 번들 파일에서 제외시켜 주는 역할을 함
+// const {CleanWebpackPlugin} = require("clean-webpack-plugin");  // webpack-node-externals 모듈은 node_modules 폴더 밑에 있는 모듈을 번들 파일에서 제외시켜 주는 역할을 함
 
 
-function getConfig(isServer) { // isServer 매개변수에 따라 웹팩 설정을 반환해주는 함수
+function getConfig(isServer, name) { // getConfig 함수의 두 번째 매개변수로 이름 정보를 추가함
     return {
-        entry: isServer // 서버 / 클라이언트에 대한 엔트리 설정
-            ? { server: './src/server.js'}
-            : { main: './src/index.js'},
+        entry: { [name]: `./src/${name}` }, // 각 이름에 해당하는 번들 파일 생성
         output: { // 클라이언트는 브라우저의 캐싱 효과 때문에 chunkhash를 사용하지만 서버는 필요 없음
             filename: isServer ? '[name].bundle.js' : '[name].[chunkhash].js',
             path: path.resolve(__dirname, 'dist'),
@@ -21,7 +19,7 @@ function getConfig(isServer) { // isServer 매개변수에 따라 웹팩 설정�
         },
         optimization: isServer // 서버 코드는 압축할 필요가 없음
             ? {
-                splitchunks: false,
+                splitChunks: false,
                 minimize: false,
             }
             : undefined,
@@ -53,7 +51,7 @@ function getConfig(isServer) { // isServer 매개변수에 따라 웹팩 설정�
         plugins: isServer // 두 플러그인은 코드 번들링 시에만 실행하면 됨
             ? []
             : [
-                new CleanWebpackPlugin(),
+                // new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
                     template: './template/index.html',
                 }),
@@ -90,4 +88,6 @@ function getConfig(isServer) { // isServer 매개변수에 따라 웹팩 설정�
 //     mode: 'production',
 // };
 
-module.exports = [getConfig(false), getConfig(true)]; // 웹팩 설정 파일에서 배열을 내보내면 배열의 각 아이템 갯수만큼 웹팩이 실행됨 -> 이 경우, 클라이언트 코드가 먼저 번들링되고, 서버 코드가 그 다음에 번들링됨
+module.exports = [getConfig(false,'index'), getConfig(true, 'server'), getConfig(true, 'prerender'),];
+// 웹팩 설정 파일에서 배열을 내보내면 배열의 각 아이템 갯수만큼 웹팩이 실행됨 -> 이 경우, 클라이언트 코드가 먼저 번들링되고, 서버 코드가 그 다음에 번들링됨
+// 마지막에 prerender.js 파일을 번들링함

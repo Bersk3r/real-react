@@ -9,13 +9,23 @@ const Container = styled.div` // styled-components를 이용하여 스타일이 
 `
 
 // export default function App({ page }) {
+
+function fetchUsername() {
+    const usernames = ['mike', 'june', 'jamie'];
+    return new Promise(resolve => {
+       const username = usernames[Math.floor(Math.random() * 3)];
+       setTimeout(() => resolve(username), 100);
+    });
+}
 export default function App( { page1 } ) {
     const [page, setPage] = useState(page1);
+    const [username, setUsername] = useState(null);
 
     useEffect(() => { // 단일 페이지 애플리케이션을 직접 구현하기 위해 onpopstate 이벤트 처리 함수를 등록함 -> 브라우저에서 뒤로 가기 버튼을 클릭하면 onpopstate 함수가 호출됨
         window.onpopstate = event => {
             setPage(event.state);
         };
+        fetchUsername().then(data => setUsername(data));
     }, []);
 
     function onChangePage(e) { // 특정 페이지로 이동하는 버튼의 이벤트 처리 함수임
@@ -31,7 +41,7 @@ export default function App( { page1 } ) {
             <div className="container">
                 <button data-page="home" onClick={onChangePage}>Home</button>
                 <button data-page="about" onClick={onChangePage}>About</button>
-                <PageComponent />
+                <PageComponent usename={username}/>
             </div>
             <img src={Icon} />
         </Container>

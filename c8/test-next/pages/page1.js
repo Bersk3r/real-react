@@ -4,11 +4,8 @@ import Link from 'next/link'
 function Page1() {
     return (
         <div>
-            <Link href="/page2">
-                {/*<a>page2로 이동</a>*/}
-                page2로 이동
-            </Link>
             <p>This is Home Page</p>
+            <p>{`10 + 20 = ${add(10,20)}`}</p>
             {/*<img src={Icon} />*/}
             <Head>
                 <title>page1</title>

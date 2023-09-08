@@ -1,11 +1,12 @@
 import Head from 'next/head';
 // import Icon from '../static/icon.jpg';
 import Link from 'next/link'
+// import add from '../src/util';
 function Page1() {
     return (
         <div>
             <p>This is Home Page</p>
-            <p>{`10 + 20 = ${add(10,20)}`}</p>
+            {/*<p>{`10 + 20 = ${add(10,20)}`}</p>*/}
             {/*<img src={Icon} />*/}
             <Head>
                 <title>page1</title>

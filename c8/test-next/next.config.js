@@ -15,4 +15,11 @@ module.exports = {
         });
         return config;
     },
+    exportPathMap: function() { // next export 명령을 실행할 때 exportPathMap 옵션이 사용됨
+        return {
+            '/page1': { page: '/page1'},
+            '/page2-hello' : { page: '/page2', query: { text: 'hello'}}, // 쿼리 파라미터 정보를 통해 미리 렌더링할 수 있음
+            '/page2-world' : { page: '/page2', query: { text: 'world'}},
+        };
+    },
 };

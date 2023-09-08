@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"page2.js -> ../src/sayHello":{"id":7667,"files":["static/chunks/667.c243f961be4e5bf0.js"]}}';

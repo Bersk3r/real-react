@@ -2,11 +2,27 @@ const express = require('express');
 const next = require('next');
 const url = require('url');
 const lruCache = require('lru-cache'); // 서버사이드 렌더링 결과를 캐싱하기 위해 lru-cache 패키지를 이용함
+const fs = require('fs');
 
 const ssrCache = new lruCache({ // 최대 100개의 항목을 저장하고 각 항목은 60초동안 저장함
     max: 100,
     maxAge: 1000 * 60,
 });
+
+const prerenderList = [ // next.config.js에서 설정한 exportPathMap 옵션의 내용과 같은 내용 -> next.config.js 파일을 파싱하는 게 좋으나 코드를 이해하는데 방해가 될 수 있어 직접 입력함
+    {name: 'page1', path: '/page1'},
+    {name: 'page2-hello', path: '/page2?text=hello'},
+    {name: 'page2-world', path: '/page2?text=world'},
+];
+
+const prerenderCache = {}; // out 폴더에 있는 미리 렌더링된 HTML 파일을 읽어서 prerenderCache에 저장함 -> next export 명령어는 프로덕션 모드에서만 사용하므로 out 폴더의 내용을 읽는 작업은 프로덕션 모드에서만 가능함
+if(!dev) {
+    for(const info of prerenderList) {
+        const {name, path} = info;
+        const html = fs.readFileSync(`.out/${name}.html`, 'utf8');
+        prerenderCache[path] = html;
+    }
+}
 
 const port = 3000;
 const dev = process.env.NODE_ENV !== 'production'; // NODE_ENV 환경 변수에 따라 개발 모드와 프로덕션 모드를 구분함
@@ -31,12 +47,17 @@ app.prepare().then(() => { // 넥스트의 준비 과정이 끝나면 입력된 
     });
 });
 
-async function renderAndCache(req, res) { // renderAndCache ㅎ마수에서 캐싱 기능을 구현함 -> 이 함수는 async await 문법을 이용함
+async function renderAndCache(req, res) { // renderAndCache 함수에서 캐싱 기능을 구현함 -> 이 함수는 async await 문법을 이용함
     const parsedUrl = url.parse(req.url, true);
     const cacheKey = parsedUrl.path; // 쿼리 파라미터가 포함된 경로를 키로 사용함
     if(ssrCache.has(cacheKey)) { // 캐시가 존재하면 캐시에 저장된 값을 사용함
         console.log('캐시 사용');
         res.send(ssrCache.get(cacheKey));
+        return;
+    }
+    if(prerenderCache.hasOwnProperty(cacheKey)) { // 미리 렌더링한 페이지라면 캐싱된 HTML을 사용함
+        console.log('미리 렌더링한 HTML 사용')
+        res.send(prerenderCache[cacheKey]);
         return;
     }
     try {

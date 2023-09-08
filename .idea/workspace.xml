@@ -5,112 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change afterPath="$PROJECT_DIR$/c8/test-next/pages/_app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-next/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-next/server_old.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-next/src/sayHello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/c8/test-next/src/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/server_old2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c8/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/build-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/next-server.js.nft.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development-fallback/0.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development-fallback/index.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development-fallback/index.pack.gz.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/0.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/1.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/2.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/3.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/index.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-development/index.pack.gz.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/0.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/1.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/2.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/3.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/4.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-development/0.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-development/1.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-development/2.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-development/index.pack.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-development/index.pack.gz.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/0.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/1.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/2.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/fallback-build-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/react-loadable-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-build-manifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-react-loadable-manifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages/_document.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages/page1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages/page2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/webpack-runtime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/amp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/pages/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/react-refresh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/fallback/webpack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/pages/_error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/pages/page1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/pages/page2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/next-server.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/react-loadable-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-build-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-react-loadable-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-react-loadable-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/pages-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/polyfills.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/react-refresh.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/webpack.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/development/_buildManifest.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/development/_ssgManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/00de28e6bca97b98.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/127edbbb79abd5d5.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/175ffe495b45274d.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/219227118ed05d2a.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/3da7ce41844427d8.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/4136f9f87f6750fd.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/53ef24b63f4ad155.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/5e68d19b957f8e2c.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/c0b78a0fc68d6685.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/df6dfd7eca29a887.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/ef40373655dad91a.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/f0458b23b83ee00e.webpack.hot-update.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.00de28e6bca97b98.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.175ffe495b45274d.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.4136f9f87f6750fd.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.53ef24b63f4ad155.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.5e68d19b957f8e2c.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/_error.ef40373655dad91a.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/page1.127edbbb79abd5d5.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/page2.3da7ce41844427d8.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/pages/page2.df6dfd7eca29a887.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.00de28e6bca97b98.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.127edbbb79abd5d5.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.175ffe495b45274d.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.219227118ed05d2a.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.3da7ce41844427d8.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.4136f9f87f6750fd.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.53ef24b63f4ad155.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.5e68d19b957f8e2c.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.c0b78a0fc68d6685.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.df6dfd7eca29a887.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.ef40373655dad91a.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/webpack/webpack.f0458b23b83ee00e.hot-update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/trace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/trace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/pages/page1.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/pages/page1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/pages/page2.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/pages/page2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c8/test-next/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "c8",
-    "last_opened_file_path": "C:/Users/PZ/Desktop/real-react/c8/test-next",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.emmet",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;c8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/c8/test-next&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.emmet&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PZ\Desktop\real-react\c8\test-next" />
@@ -192,7 +109,8 @@
       <workItem from="1694008400809" duration="4551000" />
       <workItem from="1694013030382" duration="3924000" />
       <workItem from="1694094649304" duration="11946000" />
-      <workItem from="1694160721475" duration="3527000" />
+      <workItem from="1694160721475" duration="3596000" />
+      <workItem from="1694168628501" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

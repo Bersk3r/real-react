@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
-      <change afterPath="$PROJECT_DIR$/c8/test-next/server_old2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c8/test-next/pages/_document.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c8/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/next-server.js.nft.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/client-production/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/cache/webpack/server-production/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/react-loadable-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-build-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-build-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-react-loadable-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/middleware-react-loadable-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/next-font-manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/react-refresh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/chunks/webpack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/development/_buildManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/static/development/_ssgManifest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/.next/trace" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c8/test-next/pages/page1.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/pages/page1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c8/test-next/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/c8/test-next/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +92,8 @@
       <workItem from="1694013030382" duration="3924000" />
       <workItem from="1694094649304" duration="11946000" />
       <workItem from="1694160721475" duration="3596000" />
-      <workItem from="1694168628501" duration="1245000" />
+      <workItem from="1694168628501" duration="1278000" />
+      <workItem from="1694272067651" duration="1213000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />

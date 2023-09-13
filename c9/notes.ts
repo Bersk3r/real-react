@@ -792,25 +792,198 @@ function getInfoText({name, age = 15, language}: Param): string {
 // type T2 = StringProperties<Person>; // {name: string; nation: string;}
 
 /**일부 속성만 제거해주는 유틸리티 타입*/
-type Omit<T, U extends keyof T> = Pick<T, Exclude<keyof  T, U>>; // 인터페이스 T에서 입력된 속성 이름 U를 제거함
-interface Person {
-    name: string;
-    age: number;
-    nation: string;
-}
-type T1 = Omit<Person, 'nation' | 'age'>;
-const p: T1 = {
-    name: 'mike', // Person에서 nation, age 속성을 제거했으므로, 타입 T1에는 name 속성만 남음
-};
+// type Omit<T, U extends keyof T> = Pick<T, Exclude<keyof  T, U>>; // 인터페이스 T에서 입력된 속성 이름 U를 제거함
+// interface Person {
+//     name: string;
+//     age: number;
+//     nation: string;
+// }
+// type T1 = Omit<Person, 'nation' | 'age'>;
+// const p: T1 = {
+//     name: 'mike', // Person에서 nation, age 속성을 제거했으므로, 타입 T1에는 name 속성만 남음
+// };
+
 /**인터페이스를 덮어씌우는 유틸리티 타입*/
-type Overwrite<T, U> = { [P in Exclude<keyof T,keyof U>]: T[P] } & U; // 인터페이스 T에 인터페이스 U를 덮어씀
-interface Person {
-    name: string;
-    age: number;
+// type Overwrite<T, U> = { [P in Exclude<keyof T,keyof U>]: T[P] } & U; // 인터페이스 T에 인터페이스 U를 덮어씀
+// interface Person {
+//     name: string;
+//     age: number;
+// }
+// type T1 = Overwrite<Person, { age: string; nation: string }>;
+// const p: T1 = {
+//     name: 'mike',
+//     age: '23', // age 속성의 타입은 문자열로 변경되었으며, nation 속성은 새로 추가됨
+//     nation: 'korea',
+// };
+
+/**let 변수의 타입 추론*/
+// let v1 = 123; // 타입을 명시하지 않았지만 변수 v1의 타입은 숫자가 됨
+// let v2 = 'abc'; // 마찬가지로 변수 v2의 타입은 문자열임
+// v1 = 'a'; // 타입 에러,  잘못된 타입의 값을 입력하면 타입 에러가 발생함
+// v2 = 456; // 타입 에러,
+
+/**const 변수의 타입 추론*/
+// const v1 = 123; // 변수 v1의 타입은 숫자가 아니라 123임
+// const v2 = 'abc';
+// let v3: typeof v1 | typeof v2; // typeof 키워드는 변수의 타입을 추출할 때 사용할 수 있음, v3의 타입은 123 | 'abc'가 됨
+
+/**배열과 객체의 타입 추론*/
+// const arr1 = {10,20,30}; // 배열의 타입을 정의하지 않았지만 타입 추론 덕분에 변수 arr1의 타입은 number[]가 됨
+// const [n1, n2, n3] = arr1; // 비구조화 할당의 경우, 타입 추론이 되며, 세 변수의 타입은 모두 숫자가 됨
+// arr1.push('a'); // 타입 에러, 숫자 배열에 문자열을 넣으면 타입 에러가 발생함
+//
+// const arr2 = { id: 'abcd', age: 123, language: 'korean' }; // 객체의 타입을 정의하지 않았지만 타입 추론 덕분에 변수 arr2 타입은 하기와 같아짐
+// // const arr2: { id: string; age: number; language: string; }
+// const { id, age, language } = arr2; // 비구조화 할당을 하면 자동으로 타입 정보가 포함됨
+// console.log(id === age); // 타입 에러, 숫자와 문자열을 비교하려고 시도하면 타입 에러가 발생함
+
+/**여러 가지 타입으로 구성된 배열의 타입 추론*/
+// interface Person { // Korean , Japanese 인터페이스는 Person을 확장해서 만듦
+//     name: string;
+//     age: number;
+// }
+// interface Korean extends Person {
+//     liveInSeoul: boolean;
+// }
+// interface Japanese extends Person {
+//     liveInTokyo: boolean;
+// }
+//
+// const p1: Person = { name: 'mike', age: 23 };
+// const p2: Korean = {name: 'mike', age: 25, liveInSeoul: true };
+// const p3: Japanese = { name: 'mike', age: 27, liveInTokyo: false };
+// const arr1 = [p1, p2, p3]; // 여러 가지 타입을 하나로 통합하는 과정을 거쳐야 함
+// const arr2 = [p2, p3];
+
+/**함수의 매개변수와 반환값에 대한 타입 추론*/
+// function func1(a = 'abc', b = 10) {
+//     return `${a} ${b}`;
+// }
+//
+// func1(3, 6); // 타입 에러, 첫 번째 매개변수는 숫자가 아니기 때문에 타입 에러가 발생함
+// const v1: number = func1('a', 1); // 타입 에러, 반환 값은 숫자가 아니기 때문에 타입 에러가 발생함
+//
+// function func2(value: number) { // return 키워드가 여러 번 등장해도 타입 추론은 잘 동작함 -> 이 함수의 반환 타입은 number | string이 됨
+//     if(value < 10) {
+//         return value;
+//     } else {
+//         return `${value} is too big`;
+//     }
+// }
+
+/**타입 가드를 활용하지 않은 코드*/
+// function print(value: number | string) {
+//     if(typeof value === 'number') { // typeof 키워드를 이용해서 value가 숫자인지 검사함
+//         console.log((value as number).toFixed(2)); // 타입 가드가 없다면 as 키워드를 사용하여 타입스크립트에게 value는 숫자로 알려줘야 함
+//     } else {
+//         console.log((value as string).trim()); // 숫자가 아니라면 당연히 문자열이나 타입 가드가 없다면 as 키워드로 타입 단언을 해야 함
+//     }
+// }
+
+/**타입 가드를 활용한 코드*/
+// function print(value: number | string) {
+//     if(typeof value === 'number') {
+//         console.log(value.toFixed(2)); // typeof를 통해 value를 숫자로 인식함, 숫자에만 존재하는 toFixed 메서드를 바로 호출할 수 있음
+//     } else {
+//         console.log(value.trim()); // value를 문자열로 인식함
+//     }
+// }
+
+/**instanceof 키워드를 이용한 타입 가드*/
+// class Person {
+//     name: string;
+//     age: number;
+//     constructor(name: string, age: number) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+// class Product {
+//     name: string;
+//     price: number;
+//     constructor(name: string, price: number) {
+//         this.name = name;
+//         this.price = price;
+//     }
+// }
+// function print(value: Person | Product) {
+//     console.log(value.name);
+//     if(value instanceof Person) {
+//         console.log(value.age); // 타입 가드 덕분에 if 문안에 Person의 age 속성에 접근할 수 있음
+//     } else {
+//         console.log(value.price); // 타입스크립트는 else 블록에서 value 타입이 Product라고 인식함
+//     }
+// }
+// const person = new Person('mike', 23);
+// print(person);
+/**instanceof 키워드를 잘못 사용한 예*/
+// interface Person {
+//     name: string;
+//     age: number;
+// }
+// interface Product {
+//     name: string;
+//     price: number;
+// }
+// function print(value: Person | Product) {
+//     if(value instanceof Person) { // 인터페이스는 타입 검사에만 사용되는데, 컴파일 후에는 삭제되므로 instanceof 키워드의 오른쪽에 올 수 없음
+//         console.log(value.age);
+//     } else {
+//         console.log(value.price);
+//     }
+// }
+
+/**식별 가능한 유니온 타입*/
+// interface Person {
+//     type: 'person'; // 두 인터페이스에 type이라는 같은 이름의 속성을 정의함, 각 속성은 고유의 문자열 리터럴 타입으로 정의했기 때문에 값의 집합에서 서로 겹치는 부분이 없음
+//     name: string;
+//     age: number;
+// }
+//
+// interface Product {
+//     type: 'product';
+//     name: string;
+//     price: number;
+// }
+// function print(value: Person | Product) {
+//     if(value.type === 'person') {
+//         console.log(value.age);
+//     } else {
+//         console.log(value.price);
+//     }
+// }
+
+/**switch 문에서 식별가능한 유니온 타입 사용하기*/
+function print(value: Person | Product) {
+    switch (value.type) {
+        case: 'person':
+            console.log(value.age); // 타입스크립트는 case 구문 안으로 들어오면 value의 타입을 정확히 알 수 있음
+            break;
+        case: 'product':
+            console.log(value.price);
+            break;
+    }
 }
-type T1 = Overwrite<Person, { age: string; nation: string }>;
-const p: T1 = {
-    name: 'mike',
-    age: '23', // age 속성의 타입은 문자열로 변경되었으며, nation 속성은 새로 추가됨
-    nation: 'korea',
-};
+
+/**함수를 이용한 가드*/
+// function isPerson(x: any): x is Person { // 입력된 인수가 Person 타입인지를 검사하는 함수임 -> is 키워드 왼쪽에는 매개변수 이름을, 오른족에는 타입 이름을 넣음
+//     return (x as Person).age !== undefined;
+// }
+// function print(value: Person | Product) { // age 속성이 있으면 Person 타입이라고 정의함
+//     if(isPerson(value)) { // isPerson 함수를 이용하면 타입 가드가 동작됨
+//         console.log(value.age);
+//     } else {
+//         console.log(value.price);
+//     }
+// }
+/**in키워드를 이용한 타입 가드*/
+function print(value: Person | Product) {
+    if('age' in value) { // 단순히 age 속성이 있는지 검사함
+        console.log(value.age); // 속성 이름의 존재를 검사하는 것으로 타입 가드가 동작함
+    } else {
+        console.log(value.price);
+    }
+}
+
+
+/***/

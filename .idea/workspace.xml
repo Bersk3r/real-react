@@ -5,6 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46d5d9e9-bc3c-45bc-9062-cb26c8ae09da" name="Changes" comment="middle save">
+      <change afterPath="$PROJECT_DIR$/c9/notes2.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/notes2.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-custom/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-custom/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-custom/src/legacy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-custom/src/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-next/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/common/redux.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/common/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/common/useTypedSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/person/component/Person.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/person/state/action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/person/state/reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/product/component/Product.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/product/state/action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/c9/ts-redux/src/product/state/reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c9/notes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/c9/notes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/c9/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/c9/notes.txt" afterDir="false" />
@@ -21,7 +37,9 @@
         <option value="Sass File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -37,33 +55,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;c9&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PZ/Desktop/real-react/css-test/src&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "c9",
+    "last_opened_file_path": "C:/Users/PZ/Desktop/real-react/c9/ts-redux/src/product/state",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JavaScript",
+    "ts.external.directory.path": "C:\\Users\\PZ\\Desktop\\real-react\\c9\\ts-custom\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c9\ts-redux\src\product\state" />
+      <recent name="C:\Users\PZ\Desktop\real-react\c9" />
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
       <recent name="C:\Users\PZ\Desktop\real-react\cra-test\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
-      <recent name="C:\Users\PZ\Desktop\real-react\polyfill" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PZ\Desktop\real-react\c9\ts-custom\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\css-test\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting\src" />
       <recent name="C:\Users\PZ\Desktop\real-react\code-spliting" />
@@ -90,7 +109,8 @@
       <workItem from="1688993041575" duration="103000" />
       <workItem from="1694351755831" duration="595000" />
       <workItem from="1694427052794" duration="8476000" />
-      <workItem from="1694529559531" duration="9240000" />
+      <workItem from="1694529559531" duration="9290000" />
+      <workItem from="1694588192119" duration="12044000" />
     </task>
     <task id="LOCAL-00001" summary="middle save">
       <option name="closed" value="true" />
